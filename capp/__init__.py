@@ -6,20 +6,13 @@ import os
 
 application = Flask(__name__)
 
-### Secret Key GitHub
+### Code GitHub
 # application.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
 
-### Secret Key Computer
+### Code Computer
 application.config['SECRET_KEY'] = '3oueqkfdfas8ruewqndr8ewrewrouewrere44554'
 
-# Base de datos GitHub
-# DBVAR = f"postgresql://{os.environ['RDS_USERNAME']}:{os.environ['RDS_PASSWORD']}@{os.environ['RDS_HOSTNAME']}/{os.environ['RDS_DB_NAME']}"
-# application.config['SQLALCHEMY_DATABASE_URI'] = DBVAR 
-# application.config['SQLALCHEMY_BINDS'] ={'sentence': DBVAR}
-# db = SQLAlchemy(application)
-
-
-# # Base de datos ordenador
+# Base de datos
 DBVAR = 'sqlite:///user.db'
 application.config['SQLALCHEMY_DATABASE_URI'] = DBVAR
 application.config['SQLALCHEMY_BINDS'] ={'sentence': 'sqlite:///sentence_table.db'}
@@ -42,6 +35,4 @@ application.register_blueprint(home)
 application.register_blueprint(business)
 application.register_blueprint(light_talk_app)
 application.register_blueprint(users)
-
-
 

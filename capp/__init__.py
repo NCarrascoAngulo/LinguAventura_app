@@ -14,16 +14,17 @@ application.config['SECRET_KEY'] = '3oueqkfdfas8ruewqndr8ewrewrouewrere44554'
 
 # Base de datos GitHub
 # DBVAR = f"postgresql://{os.environ['RDS_USERNAME']}:{os.environ['RDS_PASSWORD']}@{os.environ['RDS_HOSTNAME']}/{os.environ['RDS_DB_NAME']}"
-# application.config['SQLALCHEMY_DATABASE_URI'] = DBVAR 
-# application.config['SQLALCHEMY_BINDS'] ={'sentence': DBVAR}
-# db = SQLAlchemy(application)
+DBVAR = 'postgresql://postgress:ugWQXDdLZ0RgNZ0gIVf4@awseb-e-ixaw9imbh6-stack-awsebrdsdatabase-mb7kcmwiy2a1.cn480w84mbrc.us-east-1.rds.amazonaws.com:5432/ebdb'
+application.config['SQLALCHEMY_DATABASE_URI'] = DBVAR 
+application.config['SQLALCHEMY_BINDS'] ={'sentence': DBVAR}
+db = SQLAlchemy(application)
 
 
 # # Base de datos ordenador
-DBVAR = 'sqlite:///user.db'
-application.config['SQLALCHEMY_DATABASE_URI'] = DBVAR
-application.config['SQLALCHEMY_BINDS'] ={'sentence': 'sqlite:///sentence_table.db'}
-db = SQLAlchemy(application)
+# DBVAR = 'sqlite:///user.db'
+# application.config['SQLALCHEMY_DATABASE_URI'] = DBVAR
+# application.config['SQLALCHEMY_BINDS'] ={'sentence': 'sqlite:///sentence_table.db'}
+3 db = SQLAlchemy(application)
 
 # Bcrypt
 bcrypt = Bcrypt(application)

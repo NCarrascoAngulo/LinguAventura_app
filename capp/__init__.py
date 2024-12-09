@@ -24,7 +24,7 @@ db = SQLAlchemy(application)
 # DBVAR = 'sqlite:///user.db'
 # application.config['SQLALCHEMY_DATABASE_URI'] = DBVAR
 # application.config['SQLALCHEMY_BINDS'] ={'sentence': 'sqlite:///sentence_table.db'}
-3 db = SQLAlchemy(application)
+# db = SQLAlchemy(application)
 
 # Bcrypt
 bcrypt = Bcrypt(application)

@@ -10,13 +10,13 @@ application = Flask(__name__)
 # application.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
 
 ### Code Computer
-application.config['SECRET_KEY'] = '3oueqkfdfas8ruewqndr8ewrewrouewrere44554'
+# application.config['SECRET_KEY'] = '3oueqkfdfas8ruewqndr8ewrewrouewrere44554'
 
 # Base de datos
-DBVAR = 'sqlite:///user.db'
-application.config['SQLALCHEMY_DATABASE_URI'] = DBVAR
-application.config['SQLALCHEMY_BINDS'] ={'sentence': 'sqlite:///sentence_table.db'}
-db = SQLAlchemy(application)
+# DBVAR = 'sqlite:///user.db'
+# application.config['SQLALCHEMY_DATABASE_URI'] = DBVAR
+# application.config['SQLALCHEMY_BINDS'] ={'sentence': 'sqlite:///sentence_table.db'}
+# db = SQLAlchemy(application)
 
 # Bcrypt
 bcrypt = Bcrypt(application)

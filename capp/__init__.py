@@ -21,10 +21,10 @@ db = SQLAlchemy(application)
 
 
 # Base de datos ordenador
-DBVAR = 'sqlite:///user.db'
-application.config['SQLALCHEMY_DATABASE_URI'] = DBVAR
-application.config['SQLALCHEMY_BINDS'] ={'sentence': 'sqlite:///sentence_table.db'}
-db = SQLAlchemy(application)
+# DBVAR = 'sqlite:///user.db'
+# application.config['SQLALCHEMY_DATABASE_URI'] = DBVAR
+# application.config['SQLALCHEMY_BINDS'] ={'sentence': 'sqlite:///sentence_table.db'}
+# db = SQLAlchemy(application)
 
 # Bcrypt
 bcrypt = Bcrypt(application)
